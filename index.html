@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miguel Novo Villar</title>
+<meta name="description" content="Miguel Novo Villar — AI & geospatial data engineer in New York. Climate risk, data-intensive systems, and agentic AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000;
+    --fg: #f2f2f2;
+    --dim: #8a8a8a;
+    --line: #2a2a2a;
+    --accent: #ffffff;      /* set to #fb8b1e for Bloomberg amber */
+    --up: #ffffff;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    --sans: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  body { font-family: var(--mono); font-size: 14px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--dim); }
+  a:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+  /* top status bar */
+  .bar { display: flex; justify-content: space-between; gap: 16px; padding: 6px 16px;
+         background: var(--fg); color: var(--bg); font-size: 12px; font-weight: 600;
+         letter-spacing: .04em; text-transform: uppercase; }
+  .bar span:last-child { font-variant-numeric: tabular-nums; }
+
+
+  main { max-width: 960px; margin: 0 auto; padding: 48px 16px 64px; }
+
+  h1 { font-family: var(--sans); font-weight: 700; font-size: clamp(44px, 9vw, 96px);
+       line-height: .92; letter-spacing: -.01em; text-transform: uppercase; margin: 0 0 20px; }
+  .role { font-size: 15px; color: var(--fg); margin: 0 0 8px; }
+  .loc { color: var(--dim); margin: 0; font-size: 13px; }
+
+  section { margin-top: 56px; }
+  h2 { display: flex; align-items: baseline; gap: 12px; font-family: var(--mono); font-size: 12px;
+       font-weight: 600; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 16px;
+       padding-bottom: 8px; border-bottom: 1px solid var(--fg); }
+  h2 .n { color: var(--bg); background: var(--fg); padding: 0 6px; }
+
+  .about p { font-size: 16px; max-width: 68ch; margin: 0 0 14px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; color: var(--dim); font-weight: 500; font-size: 11px; letter-spacing: .08em;
+       text-transform: uppercase; padding: 0 12px 8px 0; border-bottom: 1px solid var(--line); }
+  td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.org { font-weight: 600; white-space: nowrap; }
+  td.dt { color: var(--dim); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  tr:hover td { background: #111; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px;
+          background: var(--line); border: 1px solid var(--line); }
+  .cell { background: var(--bg); padding: 14px; }
+  .cell .k { color: var(--dim); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+  .cell .v { font-size: 13px; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 12px; }
+  .links a { border: 1px solid var(--fg); padding: 8px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+
+  footer { border-top: 1px solid var(--line); padding: 16px; color: var(--dim); font-size: 11px;
+           display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+           max-width: 960px; margin: 0 auto; text-transform: uppercase; letter-spacing: .06em; }
+
+  @media (max-width: 640px) {
+    .bar span.hide-sm { display: none; }
+    table thead { display: none; }
+    table, tbody, tr, td { display: block; width: 100%; }
+    tr { border-bottom: 1px solid var(--line); padding: 10px 0; }
+    td { border: 0; padding: 2px 0; }
+    td.org { white-space: normal; }
+  }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <span>MNV</span>
+    <span class="hide-sm">Profile · New York</span>
+    <span id="clock">NY --:--:--</span>
+  </div>
+
+  <main>
+    <h1>Miguel<br>Novo Villar</h1>
+    <p class="role">AI &amp; Geospatial Data Engineer</p>
+    <p class="loc">New York, NY · Native Spanish &amp; English</p>
+
+    <section class="about">
+      <h2><span class="n">1</span> Profile</h2>
+      <p>Data scientist by training, data engineer by trade. I build data-intensive systems that connect physical climate risk to financial risk — from global flood models running millions of simulations on HPC and AWS, to agentic AI tools that read, score, and summarize documents at scale.</p>
+      <p>Former NCAA Division II soccer scholar.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span> Experience</h2>
+      <table>
+        <thead><tr><th>Org</th><th>Focus</th><th>Period</th></tr></thead>
+        <tbody>
+          <tr><td class="org">Mottum.io</td><td>AI engineering — autonomous agents, RAG, LLM benchmarking</td><td class="dt">2025 – Now</td></tr>
+          <tr><td class="org">First Street</td><td>Geospatial data engineering — climate risk &amp; global flood modeling</td><td class="dt">2024 – 2025</td></tr>
+          <tr><td class="org">Atomic Maps</td><td>Cloud-native geospatial data engineering consulting</td><td class="dt">2023 – 2024</td></tr>
+          <tr><td class="org">Esri</td><td>Solution engineering — data science &amp; analytics</td><td class="dt">2022</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="n">3</span> Education</h2>
+      <div class="grid">
+        <div class="cell"><div class="k">M.S.</div><div class="v">Data Science — University of Rochester</div></div>
+        <div class="cell"><div class="k">B.B.A.</div><div class="v">Computer Information Systems — Delta State University</div></div>
+        <div class="cell"><div class="k">Certificate</div><div class="v">Geospatial Analysis &amp; Intelligence — Delta State University</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n">4</span> Contact</h2>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/miguelnovovillar/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/mnovovil" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="yr">2026</span> Miguel Novo Villar</span>
+    <span>miguelnovovillar.com</span>
+  </footer>
+
+<script>
+  (function () {
+    var el = document.getElementById('clock');
+    function tick() {
+      try {
+        el.textContent = 'NY ' + new Date().toLocaleTimeString('en-US', { hour12: false, timeZone: 'America/New_York' });
+      } catch (e) {}
+    }
+    tick(); setInterval(tick, 1000);
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
