@@ -29,7 +29,10 @@
   .bar { display: flex; justify-content: space-between; gap: 16px; padding: 6px 16px;
          background: var(--fg); color: var(--bg); font-size: 12px; font-weight: 600;
          letter-spacing: .04em; text-transform: uppercase; }
-  .bar span:last-child { font-variant-numeric: tabular-nums; }
+  .bar-r { display: flex; gap: 20px; }
+  #clock { font-variant-numeric: tabular-nums; }
+  .bar a { color: var(--bg); border-bottom-color: var(--bg); }
+  .bar a:hover { background: var(--bg); color: var(--fg); }
 
 
   main { max-width: 960px; margin: 0 auto; padding: 48px 16px 64px; }
@@ -102,7 +105,7 @@
   <div class="bar">
     <span>MNV</span>
     <span class="hide-sm">Profile · New York</span>
-    <span id="clock">NY --:--:--</span>
+    <span class="bar-r"><a href="https://github.com/mnovovil" target="_blank" rel="noopener">GitHub ↗</a><span id="clock">NY --:--:--</span></span>
   </div>
 
   <main>
