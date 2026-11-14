@@ -72,6 +72,12 @@
   .cell .v { font-size: 13px; }
   .cell .x { color: var(--dim); font-size: 12px; margin-top: 6px; }
 
+  .proj { border: 1px solid var(--line); padding: 16px; }
+  .proj .k { color: var(--dim); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+  .proj h3 { font-family: var(--sans); font-weight: 700; font-size: 20px; line-height: 1.2; margin: 0 0 10px; }
+  .proj p { font-size: 13px; margin: 0 0 12px; max-width: 75ch; }
+  .proj a { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+
   .links { display: flex; flex-wrap: wrap; gap: 12px; }
   .links a { border: 1px solid var(--fg); padding: 8px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
 
@@ -126,7 +132,17 @@
     </section>
 
     <section>
-      <h2><span class="n">3</span> Education</h2>
+      <h2><span class="n">3</span> Projects</h2>
+      <article class="proj">
+        <div class="k">AGU25 · First Street</div>
+        <h3>A Novel Global Flood Modeling Framework Powered by Cloud-Scalable HEC-RAS 2D Engine and Advanced Climate Forcings</h3>
+        <p>Built the data pipelines behind the model's internal data layers (ingestion, cataloging, processing and QA/QC of 20+ hydrology layers across raster and vector data) and ran the production model: 5M+ batch simulation runs across HPC/SLURM clusters and AWS Batch, with monitoring and logging.</p>
+        <a href="https://studio.m-anage.com/agu/agu25/meetingapp.cgi/Paper/1983244" target="_blank" rel="noopener">AGU25 abstract ↗</a>
+      </article>
+    </section>
+
+    <section>
+      <h2><span class="n">4</span> Education</h2>
       <div class="grid">
         <div class="cell"><div class="k">M.S.</div><div class="v">Data Science — University of Rochester</div><div class="x">Varsity Men's Soccer</div></div>
         <div class="cell"><div class="k">B.S.</div><div class="v">Computer Information Systems — Delta State University</div><div class="x">Varsity Men's Soccer</div></div>
@@ -135,7 +151,7 @@
     </section>
 
     <section>
-      <h2><span class="n">4</span> Contact</h2>
+      <h2><span class="n">5</span> Contact</h2>
       <div class="links">
         <a href="https://www.linkedin.com/in/miguelnovovillar/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="https://github.com/mnovovil" target="_blank" rel="noopener">GitHub ↗</a>
