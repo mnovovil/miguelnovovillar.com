@@ -76,7 +76,10 @@
   .proj .k { color: var(--dim); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
   .proj h3 { font-family: var(--sans); font-weight: 700; font-size: 20px; line-height: 1.2; margin: 0 0 10px; }
   .proj p { font-size: 13px; margin: 0 0 12px; max-width: 75ch; }
-  .proj a { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+  .proj + .proj { margin-top: 16px; }
+  .proj > a, .plinks a { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+  .plinks { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .proj img { display: block; width: 100%; height: auto; border: 1px solid var(--line); margin: 0 0 12px; }
 
   .links { display: flex; flex-wrap: wrap; gap: 12px; }
   .links a { border: 1px solid var(--fg); padding: 8px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
@@ -133,6 +136,16 @@
 
     <section>
       <h2><span class="n">3</span> Projects</h2>
+      <article class="proj">
+        <div class="k">In progress · Personal project</div>
+        <h3>asset-risk</h3>
+        <p>Building my own physical climate risk engine. Upload a CSV of locations and get a portfolio view of flood, wildfire and wind risk. Each point is matched to its building with <a href="https://github.com/mnovovil/geolocate" target="_blank" rel="noopener">geolocate</a>, my tool that maps coordinates to Overture Maps buildings worldwide with DuckDB, then assessed with physrisk and shown in a web dashboard. Cloud deployment coming soon.</p>
+        <img src="asset-risk-demo.gif" alt="Demo of asset-risk: uploading a 500-property portfolio, then the dashboard with a risk map, an asset's flood, wildfire and wind maps, and loss charts" width="960" height="600" loading="lazy">
+        <div class="plinks">
+          <a href="https://github.com/mnovovil/asset-risk" target="_blank" rel="noopener">asset-risk on GitHub ↗</a>
+          <a href="https://github.com/mnovovil/geolocate" target="_blank" rel="noopener">geolocate on GitHub ↗</a>
+        </div>
+      </article>
       <article class="proj">
         <div class="k">AGU25 · First Street</div>
         <h3>A Novel Global Flood Modeling Framework Powered by Cloud-Scalable HEC-RAS 2D Engine and Advanced Climate Forcings</h3>
