@@ -82,7 +82,10 @@
   .proj + .proj { margin-top: 16px; }
   .proj > a, .plinks a { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
   .plinks { display: flex; flex-wrap: wrap; gap: 8px 20px; }
-  .proj img { display: block; width: 100%; height: auto; border: 1px solid var(--line); margin: 0 0 12px; }
+  .proj-media { display: grid; grid-template-columns: 1fr 280px; gap: 20px; align-items: start; }
+  .proj .demo, .proj .demo:hover { border: 0; background: none; }
+  .proj img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+  @media (max-width: 640px) { .proj-media { grid-template-columns: 1fr; } }
 
   .links { display: flex; flex-wrap: wrap; gap: 12px; }
   .links a { border: 1px solid var(--fg); padding: 8px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
@@ -139,15 +142,17 @@
 
     <section>
       <h2><span class="n">3</span> Projects</h2>
-      <article class="proj">
+      <article class="proj proj-media">
+        <div>
         <div class="k">In progress · Personal project</div>
         <h3>asset-risk</h3>
         <p>Building my own physical climate risk engine. Upload a CSV of locations and get a portfolio view of flood, wildfire and wind risk. Each point is matched to its building with <a href="https://github.com/mnovovil/geolocate" target="_blank" rel="noopener">geolocate</a>, my tool that maps coordinates to Overture Maps buildings worldwide with DuckDB, then assessed with physrisk and shown in a web dashboard. Cloud deployment coming soon.</p>
-        <img src="asset-risk-demo.gif" alt="Demo of asset-risk: uploading a 500-property portfolio, then the dashboard with a risk map, an asset's flood, wildfire and wind maps, and loss charts" width="960" height="600" loading="lazy">
         <div class="plinks">
           <a href="https://github.com/mnovovil/asset-risk" target="_blank" rel="noopener">asset-risk on GitHub ↗</a>
           <a href="https://github.com/mnovovil/geolocate" target="_blank" rel="noopener">geolocate on GitHub ↗</a>
         </div>
+        </div>
+        <a class="demo" href="https://github.com/mnovovil/asset-risk#readme" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/mnovovil/asset-risk/dev/docs/assets/demo.gif" alt="Demo of asset-risk: uploading a 500-property portfolio, then the dashboard with a risk map, an asset's flood, wildfire and wind maps, and loss charts" width="960" height="600" loading="lazy"></a>
       </article>
       <article class="proj">
         <div class="k">AGU25 · First Street</div>
