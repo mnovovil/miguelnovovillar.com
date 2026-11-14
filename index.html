@@ -87,6 +87,17 @@
   .proj img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
   @media (max-width: 640px) { .proj-media { grid-template-columns: 1fr; } }
 
+  .about-me summary { display: flex; align-items: baseline; gap: 12px; cursor: pointer; list-style: none;
+       font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+       padding-bottom: 8px; border-bottom: 1px solid var(--fg); }
+  .about-me summary::-webkit-details-marker { display: none; }
+  .about-me summary .n { color: var(--bg); background: var(--fg); padding: 0 6px; }
+  .about-me summary .tog { margin-left: auto; }
+  .about-me summary .tog::after { content: "+ Expand"; color: var(--dim); }
+  .about-me[open] summary .tog::after { content: "− Collapse"; }
+  .about-me summary:hover .tog::after { color: var(--fg); }
+  .about-me .about { padding-top: 16px; }
+
   .links { display: flex; flex-wrap: wrap; gap: 12px; }
   .links a { border: 1px solid var(--fg); padding: 8px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
 
@@ -172,7 +183,17 @@
     </section>
 
     <section>
-      <h2><span class="n">5</span> Contact</h2>
+      <details class="about-me">
+        <summary><span class="n">5</span> About me <span class="tog" aria-hidden="true"></span></summary>
+        <div class="about">
+          <p>Off the clock I'm usually around a football (soccer) pitch or out on a run. I played varsity soccer through university, and these days I log my miles on <a href="https://www.strava.com/athletes/103364333" target="_blank" rel="noopener">Strava ↗</a>.</p>
+          <p>Geography is what pulled me into geospatial data in the first place, and geopolitics is how I like to read the news: how borders, resources and climate shape what happens where. I travel whenever I can, usually with a map open longer than necessary.</p>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <h2><span class="n">6</span> Contact</h2>
       <div class="links">
         <a href="https://www.linkedin.com/in/miguelnovovillar/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="https://github.com/mnovovil" target="_blank" rel="noopener">GitHub ↗</a>
