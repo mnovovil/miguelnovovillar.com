@@ -78,6 +78,7 @@
   .proj { border: 1px solid var(--line); padding: 16px; }
   .proj .k { color: var(--dim); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
   .proj h3 { font-family: var(--sans); font-weight: 700; font-size: 20px; line-height: 1.2; margin: 0 0 10px; }
+  .proj h3.lg { font-size: 23px; }
   .proj p { font-size: 13px; margin: 0 0 12px; max-width: 75ch; }
   .proj + .proj { margin-top: 16px; }
   .proj > a, .plinks a { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
@@ -145,7 +146,7 @@
       <article class="proj proj-media">
         <div>
         <div class="k">In progress · Personal project</div>
-        <h3>asset-risk</h3>
+        <h3 class="lg">Asset Risk Engine</h3>
         <p>Building my own physical climate risk engine. Upload a CSV of locations and get a portfolio view of flood, wildfire and wind risk. Each point is matched to its building with <a href="https://github.com/mnovovil/geolocate" target="_blank" rel="noopener">geolocate</a>, my tool that maps coordinates to Overture Maps buildings worldwide with DuckDB, then assessed with physrisk and shown in a web dashboard. Cloud deployment coming soon.</p>
         <div class="plinks">
           <a href="https://github.com/mnovovil/asset-risk" target="_blank" rel="noopener">asset-risk on GitHub ↗</a>
