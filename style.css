@@ -93,6 +93,7 @@
   .proj-media { display: grid; grid-template-columns: 1fr 322px; gap: 20px; align-items: start; }
   .proj .demo, .proj .demo:hover { border: 0; background: none; }
   .proj img, .proj video { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+  .proj video { aspect-ratio: 960 / 600; object-fit: contain; background: #000; min-width: 0; }
   @media (max-width: 640px) { .proj-media { grid-template-columns: 1fr; } }
 
   .links { display: flex; flex-wrap: wrap; gap: 12px; }
