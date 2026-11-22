@@ -19,7 +19,6 @@
          background: var(--fg); color: var(--bg); font-size: 12px; font-weight: 600;
          letter-spacing: .04em; text-transform: uppercase; }
   .bar-r { display: flex; gap: 20px; }
-  #clock { font-variant-numeric: tabular-nums; }
   .bar a { color: var(--bg); border-bottom-color: var(--bg); }
   .bar a:hover { background: var(--bg); color: var(--fg); }
   .bar { position: relative; z-index: 10; align-items: center; }
@@ -104,7 +103,6 @@
            max-width: 960px; margin: 0 auto; text-transform: uppercase; letter-spacing: .06em; }
 
   @media (max-width: 640px) {
-    .bar span.hide-sm { display: none; }
     .bar-r { gap: 12px; }
     .h1-link { display: table; margin: 8px 0 0; }
     table thead { display: none; }
